@@ -1,0 +1,703 @@
+/* بعمل فهرس بكون بتكلم عن جينيرال  ستايل وعن كومون ستايل وبعدين عن سيكشنات وولادهم*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+:root{
+    color: #a52a;
+}
+.clear{
+    clear: both;
+}
+.container{
+width: 80%;
+height: 10%;
+margin: 5px auto;
+}
+
+/* header ----*/
+header{
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+     background-color: rgba(170, 86, 34, 0.295);
+}
+.header-content{
+   /* overflow: hidden;  مشان احل مشكلة ال الفلوت*/
+    padding: 1%;
+}
+.logo{
+width: 40%;
+float: left;
+}
+.logo span{
+    background-color:white;
+    color: rgb(68, 28, 3);
+    font-size: xx-large;
+    font-weight: bolder;
+    border-radius: 4%;
+}
+.nav{
+width: 60%;
+float: left;
+}
+
+.nav ul li{
+    display: inline-block; /* عشان اعطي ويدث وهاي ويجيو جمب بعض*/
+}
+.nav > ul  li > a{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding: 10px 35px;/* مشان اشاور براحتي*/
+    display: block;
+    text-align: center;
+
+}
+/* ال A الي ماخد كلاس اكتف  بفرق بس ابعد */
+.nav > ul> li > a.active:after,
+.nav > ul> li > a:after{
+    content: "";
+    display: block;
+    width:100%;
+    height: 4px;
+    background-color: #a52a;
+    transition:width .5s;
+
+
+}
+.nav > ul> li >a:after{
+    width:0;
+}
+.nav  > ul >li >a:hover::after{
+    width: 100%;
+
+}
+.drop-down{
+    position: relative;
+}
+.drop-menu {
+    position: absolute;
+    top:40px;
+    left: 30px;
+    background-color: rgba(170, 86, 34, 0.808);
+    padding: 5%;
+    height: 90%;
+    width: 150px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+
+}
+.drop-menu .a{
+display: block;
+text-decoration: none;
+
+}
+.drop-down:hover .drop-menu{
+    opacity: 1;;
+    visibility:visible;
+
+}
+@media screen and ( max-width: 800px){
+    .nav{
+        width: 60%;
+        float: left;
+        } 
+        .nav > ul  li > a{
+         
+            padding: 3px 2px;/* مشان اشاور براحتي*/
+            display: block;
+            text-align: center;
+            font-size: 9px;
+        
+        }
+        .logo{
+            width: 24%;
+            float: left;
+            }
+            .logo span{
+               
+                font-size: 14px;
+                font-weight: bolder;
+                border-radius: 4%;
+            }
+}
+/*home ----*/
+.home{
+    height: 100vh;
+    background-image: url("./Pins/FB_IMG_1599658894262.jpg");
+    background-size: cover;
+    background-position: center;
+position: relative;
+
+}
+/* راح احطو من ضمن الكومن ستايل*/
+.hover-opacity{
+    transition:opacity .5s;
+}
+
+.hover-opacity:hover{
+opacity: 0.7;
+}
+.over{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+}
+.home .home-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    text-align: center;
+    padding: 2%;
+}
+.home-content .title{
+    width: 90%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 1%;
+}
+.home-content .home-desc{
+    color: white;
+    padding: 1%;
+    letter-spacing: 2%;/*بنبعد الكلماات بعض */
+    line-height: 30px;  /* بنبعد سطور ع بعض */
+}
+.btn{
+    width: 17%;
+    height: 35px;
+    border-radius: 2%;
+    cursor: pointer;
+    border: 0;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+.btn-learn{
+    background-color: #a52a;
+}
+@media screen and  (max-width:800px){
+    .home-content .title{
+      
+        font-size:18px;
+        margin: 0;
+    }
+    .home-content .home-desc{
+        font-size: 10px;
+        line-height: 20px;
+    }
+
+    .btn{
+        width: 27%;
+    }
+}
+
+/* generall to all class sme width*/
+.pd-y{
+    padding: 90px 0;
+}
+.lft-effect{
+    position: relative;
+}
+/* width 100% ;;hi100%*/
+.lft-effect:after{
+position: absolute;
+content: "";
+width: 0;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(20, 7, 7, 0.733);
+z-index: -1;
+transition: width .6s;
+
+}
+.lft-effect:hover::after{
+    width: 100%;
+}
+
+
+/*sec header ----*/
+.sec-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sec-header .sec-title{
+    font-size:30px ;
+    color: black;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.sec-header .line{
+    display: block;
+    height: 4px;
+    width: 80px;
+    margin:auto ;
+    background-color: #a52a;
+    margin-bottom: 60px;
+}
+
+/* About*/
+@media  screen and (max-width : 800px){
+    .sec-header .sec-title{
+font-size: 100%;
+    }
+    .about-content .item{
+        height: 230px;
+        padding: 10px;
+
+    }
+    .about-content .item a{
+        padding: 1px;
+        font-size: 10px;
+        border: 1px solid #e8e8e8;
+    }
+    .about-content .item .icon{
+        font-size: 10%;
+    }
+    .about-content .item .item-title{
+font-size: 12px;
+    }
+    .item .item-parg{
+        color: black;
+        line-height: 0;
+        margin-bottom:0;
+        font-size: 9px;
+    }
+   
+}
+.about-content{
+    overflow: hidden;
+}
+.item{
+    width: 30%;
+  height: 100%;
+    float: left;
+    text-align: center;
+    border: 1px solid #a52a;
+    padding: 70px 60px;
+}
+/* الي ابنو mg*/
+.about-content .item.mg{
+    margin: 0 5%;
+}
+.about-content .item .icon{
+    color:rgba(74, 18, 206, 0.863);
+    margin-bottom: 10px;
+    font-size: 20px;
+
+}
+.about-content .item .item-title{
+     color: black;
+     text-transform: capitalize;
+     margin-bottom: 15px;
+     font-weight: 600;
+     font-family:Arial, Helvetica, sans-serif;
+     transition: color  .8s;
+}
+.item .item-parg{
+    color: black;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+.item a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 7px;
+    font-size: 20px;
+    border: 3px solid #cecccc;
+}
+.about-content .item:hover  .item-title {
+    color: white;
+}
+
+
+/* product*/
+
+
+
+.product{
+    background-color: rgba(128, 128, 128, 0.123);
+}
+.product-content{
+    overflow: hidden;
+}
+.product-content .product-item{
+    width: 30%;
+    height: 370px;
+    float: left;
+    margin-bottom:30px;
+    position: relative;
+    padding: 10px;
+}
+.product-item img{
+width: 100%;
+height: 90%;
+border-radius: 2%;
+}
+.product-item.mg {
+    margin: 0 2%;
+}
+.product-item .product-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.795);
+    transition: opacity .3s  ;
+    opacity: 0;
+    visibility: hidden;
+
+}
+.product-item:hover .product-layer{
+    opacity: 1;
+    visibility:visible;
+}
+.product-item:hover  .layer-item .category{
+    font-size: 30px;
+top: 0;
+}
+.layer-item{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    width: 60%;
+    height: 40%;
+    text-align: center;
+    line-height: 1.7;
+}
+.layer-item .category{
+    color:white;
+text-transform: uppercase;
+display: block;
+margin-bottom: 10px;
+position: relative;
+top: 5px;
+transition: top .3s;
+transition-delay: .1s;
+}
+.layer-item .layer-title{
+margin-bottom: 10px;
+
+}
+.layer-item a{
+    display: inline-block;
+    color: wheat;
+    width: 40px;
+    height: 40px;
+    background-color: #a52a;
+    border: 1px solid white;
+   
+
+
+}
+.layer-item a .icon{
+    line-height: 40px;
+}
+@media  screen and (max-width : 800px){
+.product-content .product-item .img{
+    width: 100%;
+    height: 80%;
+    }
+    .product-item .product-layer{
+        width: 100%;
+        height: 80%; 
+        font-size: 60%; 
+       
+    } 
+    .product-content .product-item{
+        margin-bottom: 10px;
+
+            width: 30%;
+            height: 200px;
+           
+        
+            position: relative;
+            padding: 1px;
+        }
+        .product-item:hover  .layer-item .category ,.layer-item a{
+            
+            font-size: 100%;
+        }
+        .layer-item a{
+        width: 20px;
+        height: 20px;
+        }
+        .layer-item a .icon{
+            line-height: 20px;
+        }
+ 
+}
+
+
+
+
+ /* dicount*/
+
+ .discount {
+     background-color: rgba(221, 160, 221, 0.137);
+     color: black;
+ }
+ .discount-countent{
+overflow: hidden;     height: 400px;
+ }
+ .discount-item{
+     float: left;
+     width: 50%;
+     height: 50%;
+ }
+ .discount-item .sec-header {
+     text-align: left;
+
+ }
+ .discount-item  .sec-header .line {
+     margin: 0;
+     margin-bottom: 60px;
+ }
+ @media  screen and (max-width : 800px){
+    .discount-item p{
+        font-size: 30%;
+        line-height: 0;
+        height: 30%;
+display: none;
+    }
+    .discount-item .discount-ul li{
+        margin: 2px;
+        font-size: 40%;
+
+    }
+    .discount-item .discount-ul li i{
+        font-size: 30%;
+        padding: 2px;
+
+    }
+    .discount-item .sec-header .sec-title , .line{
+        font-size: 10px;
+    }
+    .discount-item .sec-header  .line{
+        padding :0;
+        margin: 0;
+    }
+ }
+ .discount-item .discount-desc{
+     font-size: 90%;
+     padding-right: 20px;
+     line-height: 1.4;
+     margin-bottom: 10px;
+ }
+ .discount-item .discount-ul li{
+     margin: 10px;
+ }
+ .discount-item .discount-ul li i{
+    border: 1px solid #a52a; 
+    padding: 7px;
+    border-radius: 50%;
+ }
+ .discount-item img {
+      width:100%;
+      height: 100;
+      border-radius: 3%;
+      border: 2px solid #a52a;
+ }
+ .discount-item .discount-bolet {
+list-style: none;
+text-decoration: none;
+text-align: center;
+ }
+ .discount-item .discount-bolet li{
+width: 10px;
+height: 10px;
+display: inline-block;
+background-color: rgba(199, 100, 39, 0.521);
+margin: 10px;
+ }
+ .discount-item .discount-bolet li.active{
+   background-color: rgba(100, 48, 16, 0.966);
+     width: 15px;
+height: 15px;
+     
+ }
+
+
+ /* number*/
+ .number{
+     position: relative;
+     background-image: url("./Pins/705a163a568ce37563cab5774b70b755.jpg");
+     height: 260px;
+     background-size: cover;
+     background-attachment: fixed;
+    }
+.number-item{
+    padding-top: 30px;
+    overflow: hidden;
+   
+}
+.number-item .item{
+    float: left;
+    width: 20%;
+    border: none;
+}
+.number-item .item i{
+    font-size: 24px;
+    color: white;
+}
+.number-item .item h3{
+    margin: 10px;
+    font-size: 100%;
+    font-weight: 900;
+}
+.number-item .item span{
+    font-size: 70%;
+
+    color: white;
+}
+@media screen and (max-width:800px){
+    .number-item{
+    }
+    .number-item .item{
+        padding: 40px 0px;
+
+        width: 20%;
+        height: 70%;
+    }
+      
+
+        .number-item .item h3 , i {
+            margin: 0;
+            font-size: 60%;
+
+
+    }
+            .number-item .item i{
+         
+            }
+            .number-item .item{
+             
+            }
+
+}
+
+
+
+
+
+/* footer*/
+@media screen and (max-width:800px){
+    .footer-item ul li a  {
+        padding: 0;
+        margin: 0;
+    }
+    .footer-item ul li a i {
+        font-size: 40%;
+        padding: 0;
+        margin: 0;
+     
+    }
+    .footer-item h2{
+        font-size: 20px;
+    }
+    .footer-item ul{
+        padding: 20px;
+    }
+}
+.footer{
+    background-image: url("./Pins/FB_IMG_1604697814429.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 200px;
+    position: relative;
+    text-align: center;
+   
+}
+.footer-item{
+    padding: 20px;
+}
+.footer-item h2{
+    font-size: 40px;
+    color: white;
+    text-shadow: 5px 5px 10px rgba(170, 86, 34, 0.877);
+}
+.footer-item ul{
+    padding: 30px;
+}
+.footer-item ul li{
+
+padding: 5px 10px;
+    display: inline-block;
+}
+.footer-item ul li a{
+    color: white;
+    background-color: rgba(4, 4, 94, 0.788);
+    font-size: 20px;
+    padding: 10px;
+}
+
+.contact{
+    background-color: rgba(128, 128, 128, 0.308);
+}
+.contact-item {
+    position: relative;
+    background-color: rgba(77, 38, 14, 0.26);
+
+}
+.contact-item  .cell{
+    height: 50%;
+    text-align: center;
+
+}
+.contact-item  .cell .cell-item{
+    display: inline-block;
+    padding: 0   60px 20px 60px;
+    color: rgba(0, 0, 0, 0.87);
+
+}
+.contact-item  .cell .cell-item i{
+    color: blue;
+    font-size: 100%;
+    padding: 0 0 10px 0;
+   
+}
+.contact-item  .cell .cell-item h2{
+    font-size: 86%;
+}
+.contact-item  .cell .cell-item p {
+    color: rgb(88, 86, 86);
+    padding-top: 15px;
+}
+.contact-item  .message{
+    height: 40%;
+    text-align: center;
+}
+.contact-item  .message .message-name input{
+    width: 40%;
+    height: 35px;
+    padding: 10px;
+}
+.contact-item  .message input{
+ margin: 5px 0;
+    width:80%;
+    height: 60px;
+
+}
+.contact-item  .message  button{
+    background-color: rgba(26, 26, 243, 0.966);
+    color: white;
+    padding: 10px;
+    font-size: 13px;
+    margin: 10px;
+    cursor: pointer;
+}
